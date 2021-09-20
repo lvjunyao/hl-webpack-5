@@ -11,12 +11,13 @@ module.exports = {
     path: path.resolve(__dirname, 'bundle'),
     clean: true,
   },
+  devtool: 'inline-source-map',
   module: {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './public/index.html',
-      title: 'sdf'
+      // template: './public/index.html',
+      title: 'Development'
     })
   ]
 }
