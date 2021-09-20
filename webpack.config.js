@@ -3,8 +3,15 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   mode: 'development',
   entry: {
-    index: './src/main.js',
-    print: './src/print.js'
+    index: {
+      import: './src/main.js',
+      dependOn: 'a'
+    },
+    orther: {
+      import: './src/orther.js',
+      dependOn: 'a'
+    },
+    a: './src/a.js'
   },
   output: {
     filename: 'js/[name].[contenthash].bundle.js',
@@ -14,6 +21,12 @@ module.exports = {
   devtool: 'inline-source-map',
   devServer: {
     static: './bundle'
+  },
+  optimization: {
+    runtimeChunk: 'single',
+    splitChunks: {
+      chunks: 'all',
+    },
   },
   module: {
   },
