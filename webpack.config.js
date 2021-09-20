@@ -17,7 +17,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       // template: './public/index.html',
-      title: 'Development'
+      title: '使用 watch mode(观察模式)'
     })
   ]
 }

@@ -5,6 +5,7 @@
   "license": "MIT",
   "scripts": {
     "serve": "webpack-dev-server",
+    "watch": "webpack --env mode=prod --watch",
     "build": "webpack --env mode=prod"
   },
   "devDependencies": {
