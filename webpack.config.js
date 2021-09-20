@@ -12,12 +12,15 @@ module.exports = {
     clean: true,
   },
   devtool: 'inline-source-map',
+  devServer: {
+    static: './bundle'
+  },
   module: {
   },
   plugins: [
     new HtmlWebpackPlugin({
       // template: './public/index.html',
-      title: '使用 watch mode(观察模式)'
+      title: '使用 webpack-dev-server'
     })
   ]
 }
