@@ -8,6 +8,17 @@ module.exports = {
     path: path.resolve(__dirname, 'bundle'),
     clean: true,
   },
+  module: {
+    rules: [
+      {
+        test: /\.css$/i,
+        use: [
+          'style-loader',
+          'css-loader'
+        ]
+      }
+    ]
+  },
   plugins: [
     new HtmlWebpackPlugin({
       template: './public/index.html'
